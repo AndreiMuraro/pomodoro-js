@@ -188,14 +188,14 @@ form button {
     height: 30%;
 }
 
-.progress-circle {
+.progress-ring {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.progress-circle__circle{
+.progress-ring__circle{
     transition: 0.5s;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
