@@ -133,18 +133,6 @@ main {
 
 /* Barra da direita */
 
-.settings input{
-    color: white;
-    border-radius: 2rem;
-    backdrop-filter: blur(2rem);
-    background: linear-gradient(to right bottom,
-        rgba(24, 24, 24,0.7),
-        rgba(24, 24, 24,0.3)
-    );
-    border: none;
-    padding: 0.5rem;
-}
-
 .pomodoro{
     width: 50%;
     margin: 5rem;
@@ -154,27 +142,86 @@ main {
     flex: 2;
 }
 
-/* Cards gerado com a pesquisa */
-.card{
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(to left top,
-        rgba(24, 24, 24,0.8),
-        rgba(24, 24, 24,0.5)
+.settings input{
+    transition:  0.5s ease-in-out;
+    color: white;
+    margin: 15px 0;
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right bottom,
+        rgba(24, 24, 24,0.7),
+        rgba(24, 24, 24,0.3)
     );
-    border-radius: 1rem;
-    margin: 2rem 0rem;
-    padding: 2rem;
-    box-shadow: 6px 6px 20px rgba(28, 0, 51, 0.226);
+    border: none;
+    padding: 0.4rem;
 }
 
-.card-info {
+.buttons {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    margin: 0.3rem 0;
+}
+
+form {
+    height: 15%;
+    display:  flex;
     flex-direction: column;
-    justify-content: space-between;
+    max-width: 300px;
+    margin: 5px auto;
+}
+
+form button {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.clock {
+    padding: 3px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;    
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 30%;
+}
+
+.progress-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-circle__circle{
+    transition: 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke:deepskyblue;
+}
+
+.end-timer {
+    stroke: red;
+    animation: pulse 0.9s ease-in-out infinite;
 }
 
 /* Animações */
+@keyframes pulse {
+    0%,
+    100% {
+        transform: rotate(-90deg) scale(1);
+    }
+    50% {
+        transform: rotate(-90deg) scale(1.05);
+    }
+    75% {
+        transform: rotate(-90deg) scale(0.8);
+    }
+}
+
+
 @keyframes circle-shake {
 	0% {
 		transform: translate(0);
