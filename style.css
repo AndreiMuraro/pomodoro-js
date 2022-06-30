@@ -177,6 +177,12 @@ form button {
     margin: 5px 0;
 }
 
+form p{
+    height: 0rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 .clock {
     padding: 3px;
     display: flex;
@@ -202,7 +208,7 @@ form button {
     stroke:deepskyblue;
 }
 
-.end-timer {
+.end-time {
     stroke: red;
     animation: pulse 0.9s ease-in-out infinite;
 }
