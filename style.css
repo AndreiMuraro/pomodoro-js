@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+h2,p {
+    color: rgb(206, 206, 206);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+h3 {
+    color: white;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #011b35, #003b57);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+.color-change-2x {
+	-webkit-animation: color-change-2x 5s linear infinite alternate both;
+	        animation: color-change-2x 5s linear infinite alternate both;
+}
+
+.glass{
+    background: rgb(24, 24, 24);
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom,
+        rgba(24, 24, 24,0.7),
+        rgba(24, 24, 24,0.3)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+}
+
+.circle1, .circle2 {
+    background: rgb(24, 24, 24);
+    background: linear-gradient(to right bottom,
+        rgba(24, 24, 24,0.8),
+        rgba(24, 24, 24,0.3)
+    );
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+    animation: circle-shake 10s linear 0s infinite alternate forwards;
+}
+.circle1{
+    top: 5%;
+    right: 15%;
+}
+.circle2{
+    bottom: 5%;
+    left: 10%;
+    animation-name: move-down;
+}
+
+.dashboard  {
+    flex: 1;
+    display: flex;
+    min-width: 385.625px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom,
+        rgba(24, 24, 24,0.8),
+        rgba(24, 24, 24,0.3)
+    );
+    border-radius: 2rem;
+}
+
+.link {
+    display: flex;
+    justify-content: left;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+}
+
+.link:hover{
+    letter-spacing: 0.5px;
+}
+
+.link img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Temperatura */
+.temperature-value{
+    padding: 1rem;
+    position: relative;
+}
+
+.temperature-value img {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 25%;
+    right: 90%;
+    animation: shake 10s ease-in 0s infinite normal forwards;
+
+}
+
+.temperature-value h2{
+    font-weight: 600;
+}
+
+.link h2{
+    padding: 0rem 2rem;
+}
+
+/* Barra da direita */
+
+.settings input{
+    color: white;
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right bottom,
+        rgba(24, 24, 24,0.7),
+        rgba(24, 24, 24,0.3)
+    );
+    border: none;
+    padding: 0.5rem;
+}
+
+.pomodoro{
+    width: 50%;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 2;
+}
+
+/* Cards gerado com a pesquisa */
+.card{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to left top,
+        rgba(24, 24, 24,0.8),
+        rgba(24, 24, 24,0.5)
+    );
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(28, 0, 51, 0.226);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Animações */
+@keyframes circle-shake {
+	0% {
+		transform: translate(0);
+	}
+
+	10% {
+		transform: translate(-2px, -2px);
+	}
+
+	20% {
+		transform: translate(2px, -2px);
+	}
+
+	30% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(2px, 2px);
+	}
+
+	50% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, -2px);
+	}
+
+	70% {
+		transform: translate(-2px, 2px);
+	}
+
+	80% {
+		transform: translate(-2px, -2px);
+	}
+
+	90% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes color-change-2x {
+    0% {
+      background: #011b35;
+    }
+    100% {
+      background: #003b57;
+    }
+  }
+  @keyframes color-change-2x {
+    0% {
+      background: #011b35;
+    }
+    100% {
+      background: #003b57;
+    }
+  }
+
+  @keyframes shake {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(-2px, 2px);
+	}
+
+	40% {
+		transform: translate(-2px, -2px);
+	}
+
+	60% {
+		transform: translate(2px, 2px);
+	}
+
+	80% {
+		transform: translate(2px, -2px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}

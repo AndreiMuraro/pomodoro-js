@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="color-change-2x">
+        <section class="glass"> <!-- interface principal -->
+            <div class="dashboard"> <!-- left bar -->
+                <div class="user"> 
+                    <img src="images/user.png" alt="user">
+                    <h3>Andrei Muraro</h3>
+                    <p>Programador</p>
+                </div>
+                <div class="links">
+                    <div class="link">
+                        <img src="./images/github.png" alt="github">
+                        <a href="https://github.com/AndreiMuraro" target="_blank" style="text-decoration: none;"><h2>Github</h2></a>
+                    </div>
+                    <div class="link">
+                        <img src="./images/linkedin.png" alt="linkedin">
+                        <a href="https://www.linkedin.com/in/andreimuraro/" target="_blank" style="text-decoration: none;"><h2>Linkedin</h2></a>
+                    </div>
+                    <div class="link">
+                        <img src="./images/youtube.png" alt="youtube">
+                        <a href="https://www.youtube.com/channel/UCRFtu-wFXS9JnGoit1itybQ" target="_blank" style="text-decoration: none;"><h2>Youtube</h2></a>
+                    </div>
+                    <div class="link">
+                        <img src="./images/instagram.png" alt="instagram">
+                        <a href="https://www.instagram.com/drei.off/" target="_blank" style="text-decoration: none;"><h2>Instagram</h2></a>
+                    </div>
+                </div>
+                <div class="temperature-value">
+                    <h2>- º <span>C</span></h2>
+                    <div class="weather-icon">
+                    <img src="icons/unknown.png" alt="">
+                    </div>
+                </div>
+            </div> 
+            <div class="pomodoro"> <!-- right bar -->
+                        <h1 class="text-center">Projeto Pomodoro</h1>
+                        <div class="clock"> <!-- timer -->
+                            <div class="mins">0</div>
+                            <div>:</div>
+                            <div class="secs">00</div> 
+                            <audio src="https://soundbible.com/mp3/service-bell_daniel_simion.mp3"></audio> <!-- alarm sound --> 
+                            <svg class="progress-circle" height="120" width="120"> <!-- progress circle -->
+                                <circle 
+                                    class="progress-ring__circle"
+                                    stroke-width="8" 
+                                    fill="transparent" 
+                                    r="50" 
+                                    cx="60" 
+                                    cy="60"
+                                />
+                            </svg> 
+                        </div>
+
+                        <div class="buttons"> <!-- UI pomodoro -->
+                            <button type="button" class="btn btn-light">iniciar</button>
+                            <button type="button" class="btn btn-light">reset</button>
+                            <button type="button" class="btn btn-light">pause</button>
+                        </div>
+
+                        <form action="." class="settings"> <!-- Config pomodoro -->
+                            <input type="number" value="1" id="focusTime"/>
+                            <input type="number" value="1" id="breakTime"/>
+                            <button type="submit" class="btn btn-light">Salvar</button>
+
+                        </form>
+            </div>
+        </section>
+    </main>
+    <!-- dois elementos do fundo -->
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="openweather.js"></script>
+</body>
+</html>
