@@ -324,8 +324,9 @@ form p{
 
     .glass{
     min-height: 80vh;
+    width: 780px;
     min-width: 35vh;
-    width: 60%;
+    margin: 5vw;
 
     }
 
@@ -350,8 +351,26 @@ form p{
     .pomodoro{
         width: 100vw;
         min-height: 80vw;
-        margin-left: 10vw;
+        margin: 0 0 35vw 0;
         padding-bottom: 2vw;
+        text-align: center;
+    }
+
+    .pomodoro h1{
+        font-size: 1.5rem;
+    }
+
+    form {
+        height: 10vw;
+        max-width: 170px;
+        margin: 5px auto;
+        padding-bottom: 0;
+    }
+
+    .buttons{
+        height: 10%;
+        margin: 0 2rem;
+
     }
     
 }
