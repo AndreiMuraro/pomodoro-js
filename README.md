@@ -1,6 +1,6 @@
 # Projeto de Portfólio
 
-Esse projeto é um teste para Desenvolvedor Frontend na **4ª Edição do Programa de Estágio** do [Grupo Euax](https://grupoeuax.com.br/). Você pode visualizar o projeto [nesse link](https://andreimuraro.github.io/pomodoro-js/).
+Esse projeto é um teste para Desenvolvedor Frontend. Você pode visualizar o projeto [nesse link](https://andreimuraro.github.io/pomodoro-js/).
 
 
 # Tecnologias utilizadas
